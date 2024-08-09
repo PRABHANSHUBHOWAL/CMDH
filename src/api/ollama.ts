@@ -1,0 +1,26 @@
+import { Ollama } from 'ollama';
+// Generate a response from ollama
+export async function generate(prompt, system) {
+  const { OLLAMA_HOST } = process.env;
+  const ollama = new Ollama({ host: OLLAMA_HOST })
+
+  const response = await ollama.chat({
+    model: 'llama2',
+    messages: [{
+      'role': 'system',
+      'content': system,
+    }, {
+      'role': 'user',
+      'content': prompt
+    }],
+    stream: true,
+  });
+
+  let buffer = '';
+  for await (const part of response) {
+    if (part.message) {
+      buffer += part.message.content
+    }
+  }
+  return buffer;
+}
