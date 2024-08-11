@@ -2,7 +2,7 @@
 
 cmdh invokes LLM models provided by ollama to convert a command request into a desired command. Use it to look up commands and flags that that you don't know offhand or generate complex commands.
 
-[Demo.webm](https://drive.google.com/file/d/1GJUrkXMdTuSmKj3V_JDujF7h8xm5OiZy/view?usp=sharing](https://github.com/user-attachments/assets/816192f1-b6c4-41a6-80f1-9c5ecfa15cd9)
+[Demo.webm](https://github.com/user-attachments/assets/816192f1-b6c4-41a6-80f1-9c5ecfa15cd9)
 
 ## Features
 
